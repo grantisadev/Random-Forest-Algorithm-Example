@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+     <link
+       rel= "stylesheet"
+       type= "text/css" 
+       href= "{{ url_for('static',filename='styles.css') }}"
+      >
+</head>
+<body>
+     <h1>Student Depression Prediction</h1>
+     <form action="{{ url_for('predict')}}" method="post">
+         <input type='text' name="Value 1" placeholder="Value 1" required="required" />
+         <input type='text' name="Value 2" placeholder="Value 2" required="required" />
+         <input type='text' name="Value 3" placeholder="Value 3" required="required" />
+         <input type='text' name="Value 4" placeholder="Value 4" required="required" />
+         <br><br>
+         <input type='text' name="Value 5" placeholder="Value 5" required="required" />
+         <input type='text' name="Value 6" placeholder="Value 6" required="required" />
+         <input type='text' name="Value 7" placeholder="Value 7" required="required" />
+         <input type='text' name="Value 8" placeholder="Value 8" required="required" />
+         <br><br>
+         <input type='text' name="Value 9" placeholder="Value 9" required="required" />
+         <input type='text' name="Value 10" placeholder="Value 10" required="required" />
+         <input type='text' name="Value 11" placeholder="Value 11" required="required" />
+         <input type='text' name="Value 12" placeholder="Value 12" required="required" />
+         <br><br>
+         <input type='text' name="Value 13" placeholder="Value 13" required="required" />
+
+         <br><br>
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+     </form>
+
+     <h2>The depression status is predicted to be: {{predicted_text}}</h2>
+</body>
+</html>
